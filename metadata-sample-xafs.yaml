@@ -1,0 +1,117 @@
+# XAFSのメタデータをMDR Schemaで記述した例
+# 作者: 田辺浩介
+
+id: 80d83cf9-f912-4061-a0f7-6536f01aefc2 # MDRで自動付与
+# 書誌メタデータ
+# タイトル（複数記述可、入力必須）
+titles:
+- title: XAFS spectrum of HAVAR
+  title_type: original
+  lang: en
+- title: spring8.e79c14da-a579-4150-9a5a-df4c6db57e14
+  title_type: alternative
+
+# 識別子（複数記述可）
+identifiers:
+- identifier: RDEtag-70270009
+- identifier: urn:DATA_IDENTIFIER.dpfc.nims.go.jp:fe29e0f6-8623-41aa-a686-5eb93a47ad70
+- identifier: https://doi.org/10.48505/nims.3029
+
+# 種別（入力必須）
+resource_type: dataset # dataset, article, report, presentation, other
+
+# MDR DOI
+doi: 10.48505/nims.3029
+
+# 概要（複数記述可）
+descriptions:
+- description: This dataset consists of X-ray absorption fine structure (XAFS) spectra at Cr K-edge of HAVAR measured at SPring-8 BL14B2, and is a part of XAFS database (MDR XAFS DB,  https://doi.org/10.48505/nims.1447) as a collection of MDR
+  description_type: abstract
+  lang: en
+
+# 件名（複数記述可）
+subjects:
+  - subject: Alloy
+  - subject: BL14B2
+  - subject: Cr K-edge
+  - subject: HAVAR
+  - subject: SPring-8
+  - subject: Si(111)
+  - subject: XAFS
+  - subject: collection - MDR XAFS DB
+
+# 作成者（複数記述可、入力必須）
+creators:
+- name: Industrial Application and Partnership Division
+  role: contact_person
+  ror: https://ror.org/026v1ze26
+
+contact_agents:
+- name: NIMS
+  email: nims@example.jp
+
+# 出版者（Datasetの場合自動入力）
+# publisher:
+# - identifier:
+#   name: NIMS
+#   identifier_type: ror # ror, grid, ringgold, local
+#   value: https://ror.org/026v1ze26
+
+# 出版年月日（Datasetの場合自動入力）
+# date_published: 2021
+
+# データの公開設定（入力必須）
+visibility: open_to_public
+
+# 日付（自動入力）
+# created_at: 2021-09-06T15:00:00Z
+# updated_at: 2021-09-06T15:00:00Z
+
+# 利用条件（複数記述可、入力必須）
+licenses:
+- name: Creative Commons BY-NC-SA Attribution-NonCommercial-ShareAlike 4.0 International
+  identifier: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+# データの出所（複数記述可）
+data_origins:
+- data_origin_type: experiment
+
+# 管理組織
+managing_organization:
+  ror: https://ror.org/026v1ze26
+  organization: NIMS
+  department: 統合型材料開発・情報基盤部門 材料データプラットフォームセンター 材料データ解析グループ
+
+# 材料メタデータ
+# 装置（複数記述可）
+instruments:
+- name: BL14B2_XAFS
+  description: SPring-8 Engineering Science Research Beamline XAFS setup
+  # MatVocのURLの記入は必須としない
+  function_vocabulary: https://matvoc.nims.go.jp/wiki/Item:Q30
+  function_description: x-ray absorption spectroscopy
+  # 装置にDOIが付与されている場合、managing_organizationはDOIのメタデータから取得できる
+  # - identifier:
+  #   identifier_type: doi
+  #   value: https://doi.org/10.5555/12345678
+
+# 試料（複数記述可）
+# こちらも装置同様にマスタから選択できないか
+specimens:
+- name: HAVAR
+  description: Standard Sample
+
+chemical_compositions:
+- description: W(CO)6 #試料の化学組成の説明・記述
+
+structural_features:
+# MatVocのURLの記入は必須としない
+- category_vocabulary: https://matvoc.nims.go.jp/wiki/Item:Q639
+  description: radial distribution function
+
+# 計測法（複数記述可）
+# 対象準位_遷移_構造がJSONに記述なし
+experimental_methods:
+# MatVocのURLの記入は必須としない
+- category_vocabulary: https://matvoc.nims.go.jp/wiki/Item:Q31 # 計測法カテゴリー
+  category_description: spectroscopy -- x-ray absorption spectroscopy

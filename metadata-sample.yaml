@@ -1,0 +1,205 @@
+# MDR Schema メタデータフォーマット
+# 作者: 田辺浩介
+
+# identifier: 語彙以外のIDを想定
+# vocabulary_identifier: 語彙のIDを想定 (MatVoc, WikiData)
+#
+# 語彙の入力画面では、IDと通常の文字列（自由入力）の両方のフォームを用意することを想定。
+# IDと文字列のどちらか片方が入力されていればよいものとする
+
+id: 80d83cf9-f912-4061-a0f7-6536f01aefc2 # MDR上のID。自動付与。MDRのデータのURLで使用する
+
+# 書誌メタデータ
+# タイトル（複数記述可、入力必須）
+titles:
+- title: PHI surveyスペクトル
+  title_type: original # 新規追加
+  lang: ja # 新規追加
+- title: MIDATA001.104_20200304.spe
+  title_type: alternative
+  lang:
+
+# 識別子（複数記述可）
+identifiers:
+- identifier: DCStag-47912777 # URI形式になっていないものはローカルIDとして扱う
+- identifier: https://doi.org/10.5555/12345678
+
+# 種別（入力必須）
+# dataset, article, report, presentation, other のいずれかを取る
+resource_type: dataset
+
+# 概要（複数記述可）
+descriptions:
+- description: SAK受入テスト20200316#001-34N～36N # 入力時は必須
+  lang: ja # ISO-639-1。任意
+
+# 件名（複数記述可）
+subjects:
+- subject: subject1 # 入力時は必須
+  schema: # 件名のスキーマ。LCSH, NDLSHなど。任意
+
+# システム上の登録者のユーザID（自動入力）
+depositor: b2a4e5f3-eda4-4946-95f9-9f7d0c108f70
+
+# 作成者（複数記述可、入力必須）
+creators:
+- name: Example researcher 1 # 必須
+  orcid:
+  e_rad: '70409788' # identifier入力時は必須
+  role: curator # author, editor, translator, depositor, curator, operator. 必須
+  organization: NIMS # 所属組織
+  department: DPFC # 所属部署
+  ror: https://ror.org/026v1ze26
+- name: Example researcher 2
+  orcid:  https://orcid.org/0000-0002-1825-0097
+  e_rad:
+  role: author
+
+# 連絡担当者（複数記述可）
+contact_agents:
+- name: Example researcher 3
+  email: researcher3@nims.example.jp
+  organization: NIMS # 所属組織
+  ror: https://ror.org/026v1ze26
+
+# 出版者（Datasetの場合自動入力）
+publisher:
+  organization: NIMS
+  ror: https://ror.org/026v1ze26
+
+# 出版年月日（Datasetの場合自動入力）
+date_published: 2021-01-01
+
+# 公開状態。ユーザが指定できるのはdraftとin_reviewのみ
+state: published
+
+# コレクション
+collections:
+- title: サンプル用コレクション
+  identifier: '12345'
+
+# MDR DOI
+doi: 10.5555/12345678
+
+# 初出URL
+first_published_url: https://journal.example.jp
+
+# 原稿種別
+# authors_original,
+# under_review,
+# authors_manuscript,
+# proof,
+# vor (Version of Record)
+manuscript_type: authors_original
+
+# データの公開設定（入力必須）
+visibility: open_to_public # closed, restricted, open_to_public
+
+# 日付（自動入力）
+created_at: 2021-09-06T15:00:00Z # ISO8601
+updated_at: 2021-09-06T15:00:00Z
+
+# 利用条件（複数記述可、入力必須）
+licenses:
+# nameかidentifierのいずれか必須
+- name: In Copyright
+  date_licensed: 2021-09-06
+  condition_of_use: 商用利用の際は連絡すること
+  # 現行MDRとの互換性のために追加
+  identifier: http://rightsstatements.org/vocab/InC/1.0/
+
+# データの出所（複数記述可）
+data_origins:
+- data_origin_type: experiment
+
+# 管理組織
+managing_organization:
+  ror: https://ror.org/026v1ze26
+  organization: NIMS
+  department: 統合型材料開発・情報基盤部門 材料データプラットフォームセンター 材料データ解析グループ
+
+# 助成金情報（複数記述可）
+# identifierかdescriptionのいずれか必須
+fundings:
+- identifier: https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-21K18024/
+  description: データ駆動型研究のための研究データパッケージング手法の開発
+
+# 関連データのID（複数記述可）
+related_items:
+# DataCiteのRelationTypeを使用
+# https://support.datacite.org/docs/relationtype_for_citation
+- relation_type: is_referenced_by
+  identifier: DCStag-47912828
+
+# 材料メタデータ
+# 装置（複数記述可）
+instruments:
+- name: APItestInstrument2 #装置名。入力時は必須
+  identifier: DCStagid-46401088 # 装置ID
+  description: 説明2 # 装置説明
+  function_vocabulary: https://matvoc.nims.go.jp/wiki/Item:Q30
+  function_description:
+  manufacturer:
+
+instrument_operators:
+- name: JAEA Japan Atomic Energy Agency
+
+# 試料（複数記述可）
+specimens:
+- name: A002 #試料の名前
+  description: NiO polycrystal film サンプル8 #試料の説明
+  identifier: DCStagid-47910155 #試料のID
+
+chemical_compositions:
+- identifier: 'PubChem: 23954' #試料の化学組成に関するID
+  description: TiCoooo #試料の化学組成の説明・記述
+
+crystallographic_structures:
+- category_vocabulary: https://matvoc.nims.go.jp/wiki/Item:Q556 #試料の結晶構造に関するID
+  description: （試料の結晶構造の説明・記述）
+
+structural_features:
+- category_vocabulary: https://matvoc.nims.go.jp/wiki/Item:Q639 #試料の構造的特徴の分類
+  description: （試料の構造的特徴の説明・記述）
+
+# 計測法（複数記述可）
+experimental_methods:
+- category_vocabulary: https://matvoc.nims.go.jp/wiki/Item:Q31 # 計測法カテゴリー
+  category_description: spectroscopy -- x-ray absorption spectroscopy
+  description: 受け入れテスト20200304case3 # 標準手順？ 付記事項？
+
+# 特徴的性質（複数記述可）
+features:
+- category_vocabulary: https://matvoc.nims.go.jp/wiki/Item:Q18 # Excelに記述なし
+  description: 圧力 / パスカル # Excelに記述なし
+  value: '10'
+
+# プロセス（複数記述可）
+processing: # 単複同形であることに注意
+- category_vocabulary: https://matvoc.nims.go.jp/wiki/Item:Q29
+  description: プロセス名
+  processed_at: 2015-11-04T15:00:00Z # 処理年月日
+  processing_environment_vocabulary: https://matvoc.nims.go.jp/wiki/Item:Q551 # 処理環境
+  column_number: 5 # 処理の順番
+
+# 計算手法（複数記述可）
+computational_methods:
+- category_vocabulary: https://matvoc.nims.go.jp/wiki/Item:Q493
+  description: 
+  calculated_at: 2015-11-04T15:00:00Z # 計算日
+
+software: # ソフトウェア
+- name: notepad.exe # 新規追加
+  version: '0.1'
+  identifier: https://github.com/next-l/enju_leaf
+
+energy_levels: # エネルギー準位・遷移状態
+- category_vocabulary:
+  description: La L21-edge
+
+custom_properties: # 独自追加項目
+- name: 独自項目1
+  value: 独自の値
+- name: 独自項目2
+  value: ABCDE
+  identifier: https://example.com

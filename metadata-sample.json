@@ -1,0 +1,204 @@
+{
+  "id": "80d83cf9-f912-4061-a0f7-6536f01aefc2",
+  "titles": [
+    {
+      "title": "PHI surveyスペクトル",
+      "title_type": "original",
+      "lang": "ja"
+    },
+    {
+      "title": "MIDATA001.104_20200304.spe",
+      "title_type": "alternative",
+      "lang": null
+    }
+  ],
+  "identifiers": [
+    {
+      "identifier": "DCStag-47912777"
+    },
+    {
+      "identifier": "https://doi.org/10.5555/12345678"
+    }
+  ],
+  "resource_type": "dataset",
+  "descriptions": [
+    {
+      "description": "SAK受入テスト20200316#001-34N～36N",
+      "lang": "ja"
+    }
+  ],
+  "subjects": [
+    {
+      "subject": "subject1",
+      "schema": null
+    }
+  ],
+  "depositor": "b2a4e5f3-eda4-4946-95f9-9f7d0c108f70",
+  "creators": [
+    {
+      "name": "Example researcher 1",
+      "orcid": null,
+      "e_rad": "70409788",
+      "role": "curator",
+      "organization": "NIMS",
+      "department": "DPFC",
+      "ror": "https://ror.org/026v1ze26"
+    },
+    {
+      "name": "Example researcher 2",
+      "orcid": "https://orcid.org/0000-0002-1825-0097",
+      "e_rad": null,
+      "role": "author"
+    }
+  ],
+  "contact_agents": [
+    {
+      "name": "Example researcher 3",
+      "email": "researcher3@nims.example.jp",
+      "organization": "NIMS",
+      "ror": "https://ror.org/026v1ze26"
+    }
+  ],
+  "publisher": {
+    "organization": "NIMS",
+    "ror": "https://ror.org/026v1ze26"
+  },
+  "date_published": "2021-01-01",
+  "state": "published",
+  "collections": [
+    {
+      "title": "サンプル用コレクション",
+      "identifier": "12345"
+    }
+  ],
+  "doi": "10.5555/12345678",
+  "first_published_url": "https://journal.example.jp",
+  "manuscript_type": "AO",
+  "visibility": "open_to_public",
+  "created_at": "2021-09-06 15:00:00 UTC",
+  "updated_at": "2021-09-06 15:00:00 UTC",
+  "licenses": [
+    {
+      "name": "In Copyright",
+      "date_licensed": "2021-09-06",
+      "condition_of_use": "商用利用の際は連絡すること",
+      "identifier": "http://rightsstatements.org/vocab/InC/1.0/"
+    }
+  ],
+  "data_origins": [
+    {
+      "data_origin_type": "experiment"
+    }
+  ],
+  "managing_organization": {
+    "ror": "https://ror.org/026v1ze26",
+    "organization": "NIMS",
+    "department": "統合型材料開発・情報基盤部門 材料データプラットフォームセンター 材料データ解析グループ"
+  },
+  "fundings": [
+    {
+      "identifier": "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-21K18024/",
+      "description": "データ駆動型研究のための研究データパッケージング手法の開発"
+    }
+  ],
+  "related_items": [
+    {
+      "relation_type": "is_referenced_by",
+      "identifier": "DCStag-47912828"
+    }
+  ],
+  "instruments": [
+    {
+      "name": "APItestInstrument2",
+      "identifier": "DCStagid-46401088",
+      "description": "説明2",
+      "function_vocabulary": "https://matvoc.nims.go.jp/wiki/Item:Q30",
+      "function_description": null,
+      "manufacturer": null
+    }
+  ],
+  "instrument_operators": [
+    {
+      "name": "JAEA Japan Atomic Energy Agency"
+    }
+  ],
+  "specimens": [
+    {
+      "name": "A002",
+      "description": "NiO polycrystal film サンプル8",
+      "identifier": "DCStagid-47910155"
+    }
+  ],
+  "chemical_compositions": [
+    {
+      "identifier": "PubChem: 23954",
+      "description": "TiCoooo"
+    }
+  ],
+  "crystallographic_structures": [
+    {
+      "category_vocabulary": "https://matvoc.nims.go.jp/wiki/Item:Q556",
+      "description": "（試料の結晶構造の説明・記述）"
+    }
+  ],
+  "structural_features": [
+    {
+      "category_vocabulary": "https://matvoc.nims.go.jp/wiki/Item:Q639",
+      "description": "（試料の構造的特徴の説明・記述）"
+    }
+  ],
+  "experimental_methods": [
+    {
+      "category_vocabulary": "https://matvoc.nims.go.jp/wiki/Item:Q31",
+      "category_description": "spectroscopy -- x-ray absorption spectroscopy",
+      "description": "受け入れテスト20200304case3"
+    }
+  ],
+  "features": [
+    {
+      "category_vocabulary": "https://matvoc.nims.go.jp/wiki/Item:Q18",
+      "description": "圧力 / パスカル",
+      "value": "10"
+    }
+  ],
+  "processing": [
+    {
+      "category_vocabulary": "https://matvoc.nims.go.jp/wiki/Item:Q29",
+      "description": "プロセス名",
+      "processed_at": "2015-11-04 15:00:00 UTC",
+      "processing_environment_vocabulary": "https://matvoc.nims.go.jp/wiki/Item:Q551",
+      "column_number": 5
+    }
+  ],
+  "computational_methods": [
+    {
+      "category_vocabulary": "https://matvoc.nims.go.jp/wiki/Item:Q493",
+      "description": null,
+      "calculated_at": "2015-11-04 15:00:00 UTC"
+    }
+  ],
+  "software": [
+    {
+      "name": "notepad.exe",
+      "version": "0.1",
+      "identifier": "https://github.com/next-l/enju_leaf"
+    }
+  ],
+  "energy_levels": [
+    {
+      "category_vocabulary": null,
+      "description": "La L21-edge"
+    }
+  ],
+  "custom_properties": [
+    {
+      "name": "独自項目1",
+      "value": "独自の値"
+    },
+    {
+      "name": "独自項目2",
+      "value": "ABCDE",
+      "identifier": "https://example.com"
+    }
+  ]
+}

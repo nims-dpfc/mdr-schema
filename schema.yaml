@@ -1,0 +1,365 @@
+# MDR Schema スキーマファイル
+#
+# スキーマは[Yamale](https://github.com/23andMe/Yamale)を利用して検証できます。
+#
+# ```sh
+# $ pip install yamale
+# $ yamale metadata-sample.yml
+# ```
+#
+# - str(): 文字列（単一の値をとる項目）
+# - list(): 配列（複数の値をとる項目）
+# - int(): 数値（整数）
+# - day(): 日付
+# - timestamp(): 時刻
+# - enum('closed', 'restricted', 'open_to_public'): 列挙型項目（括弧内の値のいずれかをとる）
+# - any(int(), str()): 括弧内の種類の値のいずれかをとる
+#
+# - include('organization', required=False): organization属性の構造を持った値を複数とる
+#     - "include"で別途定義された属性を読み込んでいる
+#     - "required=False"のある項目は任意入力、ない項目は必須入力
+# - list(include('person')): person属性の構造を持った値を複数とる
+#     - "required=False"がないので、1件以上の値が必要
+
+---
+id: str(required=False) # 自動付与。指定されていなかった場合は新規作成として扱う
+# タイトル
+titles: list(include('title'))
+
+# 識別子
+identifiers: list(include('identifier'), required=False)
+
+# データ作成者
+creators: list(include('person'))
+
+# 連絡担当者
+contact_agents: list(include('contact_person'))
+
+# 出版者
+publisher: include('organization', required=False)
+
+# 件名
+subjects: list(include('subject'), required=False)
+
+# 言語
+language: str(required=False)
+
+# 概要
+descriptions: list(include('description'))
+
+# 管理組織
+managing_organization: include('organization')
+
+# 原稿種別
+manuscript_type: enum('authors_original', 'under_review', 'authors_manuscript', 'proof', 'vor', required=False)
+
+# コレクション
+collections: list(include('collection'), required=False)
+
+# データの公開設定
+visibility: enum('closed', 'restricted', 'open_to_public')
+
+# 決裁状態
+state: enum('draft', 'in_review', 'published', required=False)
+
+# データ種別
+resource_type: enum('dataset', 'article', 'report', 'presentation', 'other')
+
+# MDR DOI
+doi: str(required=False)
+
+# 出版日
+date_published: day(required=False)
+
+# 初出URL
+first_published_url: str(required=False)
+
+# システム上の登録者のユーザID（自動入力）
+depositor: str(required=False)
+
+# 作成時刻（自動入力）
+created_at: timestamp(required=False)
+
+# 更新時刻（自動入力）
+updated_at: timestamp(required=False)
+
+# ライセンス
+licenses: list(include('license'))
+
+# データの出所
+data_origins: list(include('data_origin'), required=False)
+
+# 助成金情報
+fundings: list(include('funding'), required=False)
+
+# 情報源
+sources: list(include('source'), required=False)
+
+# 会議
+conferences: list(include('conference'), required=False)
+
+# 関連データのID
+related_items: list(include('related_item'), required=False)
+
+# MDR上のURL。ユーザは入力できない
+mdr_url: str(required=False)
+
+# 試料
+specimens: list(include('specimen'), required=False)
+
+# 試料の化学組成
+chemical_compositions: list(include('chemical_composition'), required=False)
+
+# 試料の結晶構造
+crystallographic_structures: list(include('crystallographic_structure'), required=False)
+
+# 試料の構造的特徴
+structural_features: list(include('structural_feature'), required=False)
+
+# 特徴量
+features: list(include('feature'), required=False)
+
+# 装置
+instruments: list(include('instrument'), required=False)
+
+# 装置オペレータ
+instrument_operators: list(any('person', 'organization'), required=False)
+
+# 装置管理組織
+instrument_managing_organization: include('organization', required=False)
+
+# ソフトウェア
+software: list(include('software'), required=False)
+
+# プロセス
+processing: list(include('processing'), required=False)
+
+# 計測法
+experimental_methods: list(include('experimental_method'), required=False)
+
+# 計算手法
+computational_methods: list(include('computational_method'), required=False)
+
+# エネルギー準位・遷移状態
+energy_levels: list(include('energy_level'), required=False)
+
+# 独自追加項目
+custom_properties: list(include('custom_property'), required=False)
+
+---
+
+# 以下は各属性の詳細
+
+# 人物
+person:
+  name: str()
+  orcid: str(required=False)
+  e_rad: str(required=False)
+  organization: str(required=False)
+  department: str(required=False)
+  ror: str(required=False)
+  role: enum('author', 'editor', 'translator', 'depositor', 'curator', 'operator', 'contact_person')
+
+---
+# 連絡担当者
+contact_person:
+  name: str()
+  identifier: str(required=False)
+  organization: str(required=False)
+  ror: str(required=False)
+  email: str(required=False)
+
+---
+# 組織
+organization:
+  organization: str()
+  department: str(required=False)
+  ror: str(required=False)
+
+---
+# 識別子
+identifier:
+  identifier: str()
+
+---
+# 関連識別子
+related_item:
+  title: str(required=False)
+  identifier: str(required=False)
+  relation_type: enum('same_as', 'is_referenced_by', 'is_version_of', 'has_version')
+
+---
+# 情報源
+source:
+  title: str()
+  description: str(required=False)
+  identifier: str(required=False)
+
+---
+# 会議
+conference:
+  name: str()
+  description: str(required=False)
+  location: str(required=False)
+  start_date: day()
+  end_date: day(required=False)
+  identifier: str(required=False)
+
+---
+# 資金
+funding:
+  identifier: str(required=False)
+  description: str()
+
+---
+# 試料
+specimen:
+  name: str()
+  description: str(required=False)
+  identifier: str(required=False)
+  material_type_vocabulary: str(required=False)
+  material_type_description: str(required=False)
+
+---
+# 試料の化学組成
+chemical_composition:
+  specimen_identifier: str(required=False)
+  identifier: str(required=False)
+  category_vocabulary: str(required=False)
+  category_description: str(required=False)
+  description: str(required=False)
+
+---
+# 試料の結晶構造
+crystallographic_structure:
+  specimen_identifier: str(required=False)
+  category_vocabulary: str(required=False)
+  category_description: str(required=False)
+  description: str(required=False)
+
+---
+# 試料の構造的特徴
+structural_feature:
+  specimen_identifier: str(required=False)
+  category_vocabulary: str(required=False)
+  category_description: str(required=False)
+  description: str(required=False)
+
+---
+# 特徴量
+feature:
+  category_vocabulary: str(required=False)
+  description: str(required=False)
+  unit_vocabulary: str(required=False)
+  value: str(required=False)
+
+---
+# 装置
+instrument:
+  name: str()
+  description: str(required=False)
+  manufacturer: str(required=False)
+  identifier: str(required=False)
+  function_vocabulary: str(required=False)
+  function_description: str(required=False)
+  model_number: str(required=False)
+
+---
+# ソフトウェア
+software:
+  name: str()
+  version: str(required=False)
+  identifier: str(required=False)
+  description: str(required=False)
+
+---
+# プロセス
+processing:
+  category_vocabulary: str(required=False)
+  category_description: str(required=False)
+  processing_environment_vocabulary: str(required=False)
+  processing_environment_description: str(required=False)
+  processed_at: timestamp(required=False)
+  # instruments: list(include('instrument_id'), required=False)
+  description: str(required=False)
+  column_number: int(required=False)
+
+---
+# 計測法
+experimental_method:
+  category_vocabulary: str(required=False)
+  category_description: str(required=False)
+  analysis_field_vocabulary: str(required=False)
+  analysis_field_description: str(required=False)
+  measurement_environment_vocabulary: str(required=False)
+  standarized_procedure_vocabulary: str(required=False)
+  description: str(required=False)
+  measured_at: timestamp(required=False)
+
+---
+# 計算手法
+computational_method:
+  category_vocabulary: str(required=False)
+  category_description: str(required=False)
+  calculated_at: timestamp(required=False)
+  description: str(required=False)
+
+# エネルギー準位・遷移状態
+energy_level:
+  category_vocabulary: str(required=False)
+  description: str(required=False)
+
+---
+# 独自追加項目
+custom_property:
+  name: str()
+  vocabulary: str(required=False)
+  value: str(required=False)
+  identifier: str(required=False)
+
+#---
+# 語彙
+# vocabulary:
+#   vocabulary_identifier: str()
+#   description: str(required=False)
+
+---
+# タイトル
+title:
+  title: str()
+  title_type: str(required=False)
+  lang: str(required=False)
+
+---
+# ライセンス
+license:
+  name: str()
+  identifier: str()
+  date_licensed: day(required=False)
+  condition_of_use: str(required=False)
+
+---
+# データの出所
+data_origin:
+  data_origin_type: str()
+
+---
+# 件名
+subject:
+  subject: str()
+  schema: str(required=False)
+
+---
+# 説明
+description:
+  description: str()
+  description_type: str(required=False)
+  lang: str(required=False)
+
+---
+# コレクション
+collection:
+  title: str()
+  identifier: str(required=False)
+  description: str(required=False)
+  mdr_url: str(required=False)

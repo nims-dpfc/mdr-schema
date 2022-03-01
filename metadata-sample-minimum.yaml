@@ -1,0 +1,74 @@
+# MDR Schemaでの書誌・材料メタデータを含めた最小限のメタデータ記述
+# 作者: 田辺浩介
+
+# 新規作成時はid省略可能（MDRで自動付与）、id指定時はそのidのデータを更新
+# id: 80d83cf9-f912-4061-a0f7-6536f01aefc2
+
+# 書誌メタデータ
+# タイトル（複数記述可、入力必須）
+titles:
+- title: PHI surveyスペクトル
+
+# 種別
+resource_type: dataset
+
+# 概要（複数記述可）
+descriptions:
+- description: テスト用データ
+
+# 作成者（複数記述可、入力必須）
+creators:
+- name: TANABE, Kosuke
+  e_rad: '70409788'
+  role: curator
+
+# 連絡担当者（複数記述可）
+contact_agents:
+- name: NAGAO, Hiroko
+  email: NAGAO.Hiroko@nims.example.jp
+
+# データの公開設定
+visibility: open_to_public
+
+# 利用条件（複数記述可、入力必須）
+licenses:
+- name: In Copyright
+  identifier: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+# データの出所（複数記述可）
+data_origins:
+- data_origin_type: experiment
+
+# 管理組織
+managing_organization:
+  organization: NIMS
+
+# 材料メタデータ
+# 装置（複数記述可）
+instruments:
+- name: APItestInstrument2 #装置名
+  description: 説明2 # 装置説明
+
+# 試料（複数記述可）
+# こちらも装置同様にマスタから選択できないか
+specimens:
+- name: A002 #試料の名前
+  description: NiO polycrystal film サンプル8 #試料の説明
+
+# 計測法（複数記述可）
+# 対象準位_遷移_構造がJSONに記述なし
+experimental_methods:
+- description: 受け入れテスト20200304case3 # 標準手順？ 付記事項？
+  measured_at: 2017-06-05T15:00:00Z # 分析年月日
+
+# 特徴的性質（複数記述可）
+features:
+- description: 圧力 / パスカル # Excelに記述なし
+
+# プロセス（複数記述可）
+processing: # 単複同形であることに注意
+- description: 説明文
+
+# 計算手法（複数記述可）
+computational_methods:
+- description: 説明文
