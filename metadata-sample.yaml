@@ -100,7 +100,7 @@ created_at: 2021-09-06T15:00:00Z # ISO8601
 updated_at: 2021-09-06T15:00:00Z
 
 # 利用条件（複数記述可、入力必須）
-licenses:
+rights:
 # nameかidentifierのいずれか必須
 - name: In Copyright
   date_licensed: 2021-09-06
