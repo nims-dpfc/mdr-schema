@@ -31,7 +31,7 @@ contact_agents:
 visibility: open_to_public
 
 # 利用条件（複数記述可、入力必須）
-licenses:
+rights:
 - name: In Copyright
   identifier: https://creativecommons.org/licenses/by-nc-sa/4.0/
 

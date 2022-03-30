@@ -83,8 +83,8 @@ created_at: timestamp(required=False)
 # 更新時刻（自動入力）
 updated_at: timestamp(required=False)
 
-# ライセンス
-licenses: list(include('license'))
+# 権利情報
+rights: list(include('right'))
 
 # データの出所
 data_origins: list(include('data_origin'), required=False)
@@ -331,8 +331,8 @@ title:
   lang: str(required=False)
 
 ---
-# ライセンス
-license:
+# 権利情報
+right:
   name: str()
   identifier: str()
   date_licensed: day(required=False)

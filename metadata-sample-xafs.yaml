@@ -68,7 +68,7 @@ visibility: open_to_public
 # updated_at: 2021-09-06T15:00:00Z
 
 # 利用条件（複数記述可、入力必須）
-licenses:
+rights:
 - name: Creative Commons BY-NC-SA Attribution-NonCommercial-ShareAlike 4.0 International
   identifier: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
