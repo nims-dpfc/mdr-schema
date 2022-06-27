@@ -144,6 +144,9 @@ instruments:
 instrument_operators:
 - name: JAEA Japan Atomic Energy Agency
 
+instrument_managing_organizations:
+- organization: JAEA Japan Atomic Energy Agency
+
 # 試料（複数記述可）
 specimens:
 - name: A002 #試料の名前
