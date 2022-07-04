@@ -126,7 +126,7 @@ instruments: list(include('instrument'), required=False)
 instrument_operators: list(any('person', 'organization'), required=False)
 
 # 装置管理組織
-instrument_managing_organization: include('organization', required=False)
+instrument_managing_organizations: list(include('organization'), required=False)
 
 # ソフトウェア
 software: list(include('software'), required=False)
