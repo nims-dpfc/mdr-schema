@@ -32,7 +32,7 @@ visibility: open_to_public
 
 # 利用条件（複数記述可、入力必須）
 rights:
-- name: In Copyright
+- description: In Copyright
   identifier: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 # データの出所（複数記述可）
