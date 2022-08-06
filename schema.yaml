@@ -374,3 +374,4 @@ collection:
 # ファイル
 fileset:
   filename: str()
+  content_type: str()
