@@ -164,8 +164,10 @@ person:
 # 連絡担当者
 contact_person:
   name: str()
-  identifier: str(required=False)
+  orcid: str(required=False)
+  e_rad: str(required=False)
   organization: str(required=False)
+  department: str(required=False)
   ror: str(required=False)
   email: str(required=False)
 
