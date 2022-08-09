@@ -69,7 +69,7 @@ visibility: open_to_public
 
 # 利用条件（複数記述可、入力必須）
 rights:
-- name: Creative Commons BY-NC-SA Attribution-NonCommercial-ShareAlike 4.0 International
+- description: Creative Commons BY-NC-SA Attribution-NonCommercial-ShareAlike 4.0 International
   identifier: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 # データの出所（複数記述可）

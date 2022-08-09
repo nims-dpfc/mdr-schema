@@ -101,8 +101,8 @@ updated_at: 2021-09-06T15:00:00Z
 
 # 利用条件（複数記述可、入力必須）
 rights:
-# nameかidentifierのいずれか必須
-- name: In Copyright
+# descriptionかidentifierのいずれか必須
+- description: In Copyright
   date_licensed: 2021-09-06
   condition_of_use: 商用利用の際は連絡すること
   # 現行MDRとの互換性のために追加

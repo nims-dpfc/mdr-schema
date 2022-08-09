@@ -339,7 +339,7 @@ title:
 ---
 # 権利情報
 right:
-  name: str()
+  description: str()
   identifier: str()
   date_licensed: day(required=False)
   condition_of_use: str(required=False)

@@ -79,7 +79,7 @@
   "updated_at": "2021-09-06T15:00:00Z",
   "rights": [
     {
-      "name": "In Copyright",
+      "description": "In Copyright",
       "date_licensed": "2021-09-06",
       "condition_of_use": "商用利用の際は連絡すること",
       "identifier": "http://rightsstatements.org/vocab/InC/1.0/"
