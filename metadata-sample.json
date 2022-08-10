@@ -73,10 +73,10 @@
   ],
   "doi": "10.5555/12345678",
   "first_published_url": "https://journal.example.jp",
-  "manuscript_type": "AO",
+  "manuscript_type": "authors_original",
   "visibility": "open_to_public",
-  "created_at": "2021-09-06 15:00:00 UTC",
-  "updated_at": "2021-09-06 15:00:00 UTC",
+  "created_at": "2021-09-06T15:00:00Z",
+  "updated_at": "2021-09-06T15:00:00Z",
   "rights": [
     {
       "description": "In Copyright",
@@ -107,6 +107,18 @@
       "identifier": "DCStag-47912828"
     }
   ],
+  "filesets": [
+    {
+      "filename": "example1.txt"
+    },
+    {
+      "filename": "example2.png"
+    },
+    {
+      "filename": "example3.zip"
+    }
+  ],
+  "thumbnail": "example2.png",
   "instruments": [
     {
       "name": "APItestInstrument2",
@@ -120,6 +132,11 @@
   "instrument_operators": [
     {
       "name": "JAEA Japan Atomic Energy Agency"
+    }
+  ],
+  "instrument_managing_organizations": [
+    {
+      "organization": "JAEA Japan Atomic Energy Agency"
     }
   ],
   "specimens": [
@@ -165,7 +182,7 @@
     {
       "category_vocabulary": "https://matvoc.nims.go.jp/wiki/Item:Q29",
       "description": "プロセス名",
-      "processed_at": "2015-11-04 15:00:00 UTC",
+      "processed_at": "2015-11-04T15:00:00Z",
       "processing_environment_vocabulary": "https://matvoc.nims.go.jp/wiki/Item:Q551",
       "column_number": 5
     }
@@ -174,7 +191,7 @@
     {
       "category_vocabulary": "https://matvoc.nims.go.jp/wiki/Item:Q493",
       "description": null,
-      "calculated_at": "2015-11-04 15:00:00 UTC"
+      "calculated_at": "2015-11-04T15:00:00Z"
     }
   ],
   "software": [

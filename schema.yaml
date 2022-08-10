@@ -104,6 +104,12 @@ related_items: list(include('related_item'), required=False)
 # MDR上のURL。ユーザは入力できない
 mdr_url: str(required=False)
 
+# ファイル
+filesets: list(include('fileset'), required=False)
+
+# サムネイル。filesets内のfilenameを指定
+thumbnail: str(required=False)
+
 # 試料
 specimens: list(include('specimen'), required=False)
 
@@ -365,3 +371,9 @@ collection:
   identifier: str(required=False)
   description: str(required=False)
   mdr_url: str(required=False)
+
+---
+# ファイル
+fileset:
+  filename: str()
+  content_type: str()

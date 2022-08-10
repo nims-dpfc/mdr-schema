@@ -131,6 +131,15 @@ related_items:
 - relation_type: is_referenced_by
   identifier: DCStag-47912828
 
+# ファイル（複数記述可）
+filesets:
+- filename: example1.txt
+- filename: example2.png
+- filename: example3.zip
+
+# サムネイル
+thumbnail: example2.png
+
 # 材料メタデータ
 # 装置（複数記述可）
 instruments:
