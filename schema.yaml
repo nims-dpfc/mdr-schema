@@ -194,7 +194,7 @@ identifier:
 related_item:
   title: str(required=False)
   identifier: str(required=False)
-  relation_type: enum('same_as', 'is_referenced_by', 'is_version_of', 'has_version')
+  relation_type: enum('same_as', 'is_supplement_to', 'is_referenced_by', 'is_version_of', 'has_version')
 
 ---
 # 情報源
@@ -376,4 +376,4 @@ collection:
 # ファイル
 fileset:
   filename: str()
-  content_type: str()
+  content_type: str(required=False)
