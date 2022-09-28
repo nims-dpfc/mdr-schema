@@ -63,7 +63,7 @@ visibility: enum('closed', 'restricted', 'open_to_public')
 state: enum('draft', 'in_review', 'published', required=False)
 
 # データ種別
-resource_type: enum('dataset', 'article', 'report', 'presentation', 'other')
+resource_type: enum('dataset', 'article', 'report', 'presentation', 'software', 'image', 'audio', 'video', 'other')
 
 # MDR DOI
 doi: str(required=False)
