@@ -201,7 +201,12 @@ related_item:
 source:
   title: str()
   description: str(required=False)
-  identifier: str(required=False)
+  isbn: str(required=False)
+  issn: str(required=False)
+  start_page: int(required=False)
+  end_page: int(required=False)
+  article_number: str(required=False)
+  volume: str(required=False)
 
 ---
 # 会議
