@@ -354,7 +354,7 @@ right:
 ---
 # データの出所
 data_origin:
-  data_origin_type: enum('experiment', 'informatics_and_data_science', 'simulation', 'theory', 'other')
+  data_origin_type: enum('experiment', 'informatics_and_data_science', 'simulation', 'theory', 'other', required=False)
 
 ---
 # 件名
