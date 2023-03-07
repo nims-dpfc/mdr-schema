@@ -1,6 +1,6 @@
 # MDR Schema
 
-[![DOI:10.48505/nims.3239](https://img.shields.io/badge/DOI-10.48505%2Fnims.3239-blue)](https://doi.org/10.48505/nims.3239) [![License:CC-BY-4.0](https://img.shields.io/github/license/nims-dpfc/mdr-schema)](https://creativecommons.org/licenses/by/4.0/legalcode)
+[![DOI:10.48505/nims.3239](https://img.shields.io/badge/DOI-10.48505%2Fnims.3239-blue)](https://doi.org/10.48505/nims.3239) [![License:CC-BY-4.0](https://img.shields.io/github/license/nims-dpfc/mdr-schema)](https://creativecommons.org/licenses/by/4.0/legalcode) ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/nims-dpfc/mdr-schema/validate.yml?branch=main&label=validation)
 
 MDR Schemaは、物質・材料研究機構(NIMS)が運営する材料データリポジトリ「[Materials Data Repository (MDR)](https://mdr.nims.go.jp)」が採用するメタデータスキーマです。MDRは、[材料データプラットフォームDICE](https://dice.nims.go.jp)が提供するサービスの一つで、公的研究資金による研究成果を公開することで、新たな研究に繋げることを目的とするリポジトリサービスです。研究論文や、論文に付随する研究データ、および研究に資するプログラムなど、公知となった成果にDOIを付与して公開しており、データの引用やダウンロードが可能です。
 MDRの詳細については、[DICEのWebサイト](https://dice.nims.go.jp/services/MDR/)をご覧ください。
