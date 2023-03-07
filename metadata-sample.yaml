@@ -130,6 +130,7 @@ related_items:
 # https://support.datacite.org/docs/relationtype_for_citation
 - relation_type: is_referenced_by
   identifier: DCStag-47912828
+  related_item_type: dataset
 
 # ファイル（複数記述可）
 filesets:
