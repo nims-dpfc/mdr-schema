@@ -123,6 +123,7 @@ managing_organization:
 fundings:
 - identifier: https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-21K18024/
   description: データ駆動型研究のための研究データパッケージング手法の開発
+  funder_name: JSPS
 
 # 関連データのID（複数記述可）
 related_items:
