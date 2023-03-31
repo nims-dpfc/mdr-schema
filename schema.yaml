@@ -223,6 +223,7 @@ conference:
 # 資金
 funding:
   identifier: str(required=False)
+  funder_name: str()
   description: str()
 
 ---
