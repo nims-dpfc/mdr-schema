@@ -216,3 +216,11 @@ custom_properties: # 独自追加項目
 - name: 独自項目2
   value: ABCDE
   identifier: https://example.com
+
+filesets:
+- filename: image1.png
+- filename: image2.jpg
+- filename: image3.tif
+
+thumbnail:
+  filename: image1.png

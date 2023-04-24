@@ -108,7 +108,7 @@ mdr_url: str(required=False)
 filesets: list(include('fileset'), required=False)
 
 # サムネイル。filesets内のfilenameを指定
-thumbnail: str(required=False)
+thumbnail: include('thumbnail_entry', required=False)
 
 # 試料
 specimens: list(include('specimen'), required=False)
@@ -383,3 +383,7 @@ collection:
 fileset:
   filename: str()
   content_type: str(required=False)
+
+# サムネイル。filesets内のfilenameを指定
+thumbnail_entry:
+  filename: str()
