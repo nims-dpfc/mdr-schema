@@ -194,7 +194,7 @@ identifier:
 related_item:
   title: str(required=False)
   identifier: str(required=False)
-  relation_type: enum('same_as', 'is_supplement_to', 'is_referenced_by', 'references', 'is_version_of', 'has_version', 'is_documented_by', 'documents')
+  relation_type: enum('same_as', 'is_supplement_to', 'is_referenced_by', 'references', 'is_version_of', 'has_version', 'is_documented_by', 'documents', 'continues', 'is_continued_by', 'is_published_in')
   related_item_type: enum('dataset', 'article', 'report', 'presentation', 'software', 'image', 'audio', 'video', 'other')
 
 ---
