@@ -188,7 +188,7 @@ organization:
 # 識別子
 identifier:
   identifier: str()
-  identifier_type: str()
+  identifier_type: str(required=False)
 
 ---
 # 関連識別子
