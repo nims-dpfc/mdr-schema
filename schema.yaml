@@ -208,6 +208,7 @@ source:
   end_page: int(required=False)
   article_number: str(required=False)
   volume: str(required=False)
+  issue: str(required=False)
 
 ---
 # 会議
