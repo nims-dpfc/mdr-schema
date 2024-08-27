@@ -45,10 +45,10 @@ subjects: list(include('subject'), required=False)
 language: str(required=False)
 
 # 概要
-descriptions: list(include('description'))
+descriptions: list(include('description'), required=False)
 
 # 管理組織
-managing_organization: include('organization')
+managing_organization: include('organization', required=False)
 
 # 原稿種別
 manuscript_type: enum('authors_original', 'under_review', 'authors_manuscript', 'proof', 'vor', required=False)
